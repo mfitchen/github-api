@@ -1,5 +1,8 @@
 $grey: #333333;
 $lightgrey: #888888;
+$lightestgrey: #e9e9e9;
+$middlebluegreen: #8ddbe0;
+$steelblue: steelblue;
 
 .gh-user {
   display: flex;
@@ -49,10 +52,57 @@ $lightgrey: #888888;
 .link {
   text-decoration: none;
   letter-spacing: 0;
-  color: cyan;
+  color: $middlebluegreen;
   &:hover {
-    color: lightgreen;
+    color: $steelblue;
   }
+}
+
+h1, input, button {
+    display: block;
+}
+
+h1 {
+  margin-left: 20px;
+}
+
+input, button {
+  height: 39px;
+  width: 175px;
+  margin: 8px 0 8px 20px;
+  border-radius: 5px;
+}
+
+input {
+  border: 2px solid $lightestgrey;
+  color: $steelblue;
+  padding: 0 0 0 8px;
+}
+
+::-webkit-input-placeholder {
+  color: $middlebluegreen;
+  letter-spacing: 0.5px;
+}
+::-moz-placeholder {
+  color: $middlebluegreen;
+  letter-spacing: 0.5px;
+}
+:-moz-placeholder {
+  color: $middlebluegreen;
+  letter-spacing: 0.5px;
+}
+:-ms-input-placeholder {
+  color: $middlebluegreen;
+  letter-spacing: 0.5px;
+}
+
+button {
+  background-color: $middlebluegreen;
+  border: 2px solid $middlebluegreen;
+  color: $grey;
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 h4 {
@@ -63,6 +113,15 @@ h4 {
   color: $grey;
   margin: 0;
   padding: 0;
+}
+
+.repo-link {
+  text-decoration: none;
+  letter-spacing: 0;
+  color: $grey;
+  &:hover {
+    color: $middlebluegreen;
+  }
 }
 
 .repo-name-value {

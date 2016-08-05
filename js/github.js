@@ -3,14 +3,6 @@ var apiKey = require('./../.env').apiKey;
 function GitHub(){
 }
 
-// GitHub.prototype.getGitHub = function(city, displayFunction) {
-//   $.get('http://api.openweathermap.org/data/2.5/weather?q=' + city + '&appid=' + apiKey).then(function(response) {
-//     displayFunction(city, response.main.humidity);
-//   }).fail(function(error) {
-//     $('.show-gh-user-info').text(error.responseJSON.message);
-//   });
-// }
-
 GitHub.prototype.getRepos = function(ghUser) {
   $.get('https://api.github.com/users/' + ghUser + '?access_token=' + apiKey).then(function(response){
     $('#show-gh-user-profile-pic').empty();
@@ -33,14 +25,18 @@ GitHub.prototype.getRepos = function(ghUser) {
     console.log(error.responseJSON.message);
   });
 
-  $.get('https://api.github.com/users/' + ghUser + '/repos?access_token=' + apiKey).then(function(response){
+  $.get('https://api.github.com/users/' + ghUser + '/repos?&per_page=300&access_token=' + apiKey).then(function(response){
     $('#show-gh-user-repos').empty();
     for(var i = 0; i < response.length; i++) {
-      $('#show-gh-user-repos').append("<h4>Repo: &nbsp;<span class='repo-name-value'>" + response[i].name + "</span></h4><p>" + response[i].description + "</p>");
+      $('#show-gh-user-repos').append("<h4><a class='repo-link' href='" + response[i].html_url + "' target='_blank'>Repo</a>: &nbsp;<span class='repo-name-value'>" + response[i].name + "</span></h4><p>" + response[i].description + "</p>");
     };
 
+    // console.log(response);
+    // <!--returns JSON Object from API call and shows you the JSON Object's Key:Value pair specific to a GitHub user's repositories-->
+
     // console.log(response[0].name);
-    // console.log(response[0].description);
+    // <!--returns JSON Object from API call and shows you the repository name in the zeroth (0th) position of the array-->
+
   }).fail(function(error){
     console.log(error.responseJSON.message);
   });
