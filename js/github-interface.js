@@ -1,7 +1,7 @@
 var GitHub = require('./../js/github.js').githubModule;
 
-var displayGitHub = function(city, gitHubData) {
-  $('.show-gh-user-info').text("The humidity in " + city + " is " + gitHubData + "%");
+var displayGitHubUser = function(ghUser) {
+  $('.show-gh-user-info').text("The GitHub username you entered is " + ghUser + ".");
 }
 
 $(document).ready(function() {
@@ -9,6 +9,7 @@ $(document).ready(function() {
   $('#gh-username-button').click(function() {
     var ghUser = $('#gh-username-input').val();
     $('#gh-username-input').val("");
-    currentGitHubObject.getGitHub(ghUser, displayGitHub);
+    currentGitHubObject.getRepos(ghUser, displayGitHubUser);
+    // currentGitHubObject.getGitHub(ghUser, displayGitHubUser);
   });
 });
