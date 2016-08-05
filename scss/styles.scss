@@ -1,14 +1,81 @@
-$gray : #d3d3d3;
-$green : #75B975;
+$grey: #333333;
+$lightgrey: #888888;
 
-.box {
-  background: $gray;
-  border: 3px solid black;
-  padding: 40px 80px;
-  .button {
-    font-weight: bold;
-    text-align: center;
-    background: $green;
-    color: white;
+.gh-user {
+  display: flex;
+  height: 240px;
+  padding: 20px 20px;
+  .gh-profile-pic {
+    #show-gh-user-profile-pic {
+      height: 200px;
+      width: 200px;
+      img {
+        width: 100%;
+        margin-right: 10px;
+      }
+    }
   }
+  .gh-user-info {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    #show-gh-user-username, #show-gh-user-full-name, #show-gh-user-location, #show-gh-user-url, #show-gh-user-repository-count {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-end;
+      height: 40px;
+      width: 500px;
+    }
+  }
+}
+
+#show-gh-user-repos {
+  padding-left: 21px;
+}
+
+.key {
+  font-size: 20px;
+  font-weight: bold;
+  color: $grey;
+}
+
+.value {
+  font-size: 20px;
+  font-weight: lighter;
+  letter-spacing: 3px;
+  color: $lightgrey;
+}
+
+.link {
+  text-decoration: none;
+  letter-spacing: 0;
+  color: cyan;
+  &:hover {
+    color: lightgreen;
+  }
+}
+
+h4 {
+  font-size: 13px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: -0.5px;
+  color: $grey;
+  margin: 0;
+  padding: 0;
+}
+
+.repo-name-value {
+  font-size: 15px;
+  letter-spacing: 3.5px;
+  font-weight: lighter;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+  color: $lightgrey;
+}
+
+p {
+  font-size: 13px;
+  font-weight: normal;
+  color: $lightgrey;
 }

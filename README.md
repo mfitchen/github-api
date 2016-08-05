@@ -10,7 +10,7 @@ _This is an Epicodus student solo project using the GitHub API to have a user in
 
 Project Requirements & Objectives  | Complete
 :------------- | :-------------: |
-*Required*: Create a website where the user can enter a GitHub username into a form, submit it, and see names and descriptions of that person's public repositories. | --
+*Required*: Create a website where the user can enter a GitHub username into a form, submit it, and see names and descriptions of that person's public repositories. | X
 *Objectives*: Include your API key stored in the variable ``exports.apiKey``. | X
 *Objective*: Include at least 2 JavaScript files. | X
 *Objectives*: Use ``exports`` successfully in at least one JavaScript file. | X
@@ -24,7 +24,7 @@ Project Requirements & Objectives  | Complete
 * _Clone repository from GitHub to your local machine (usually to your Desktop) in the Command Line:_ ``$ git clone https://github.com/mfitchen/github-api``
 * _Change directories into the root of the project folder:_ ``$ cd github-api``
 * _Visit the <a href="https://dl.dropboxusercontent.com/s/l772alr0kewlqeg/githubsettings.png?dl=0">Settings</a> area of your GitHub account, select **Personal Access Tokens** from the sidebar, and hit <a href="https://dl.dropboxusercontent.com/s/qk0qcsy487yg7ci/githubgeneratetoken.png?dl=0">Generate New Token</a>._
-* _Place your token in an **.env** file at the top level of your directory._
+* _Place your token (or API Key) in an **.env** file at the top level of your directory._
 * _Install the Node Project Manager (npm) in the Command Line:_ ``$ npm install``
 * _Install the Bower Project Manager in the Command Line:_ ``$ bower install``
 * _Run the 'build' gulp.task in the Command Line:_ ``$ gulp build``
